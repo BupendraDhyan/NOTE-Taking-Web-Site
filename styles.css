@@ -1,0 +1,22 @@
+body {
+    font font-family: Arial, sans-serif;
+    max-width : 800px;
+    margin : 0 auto;
+    padding : 20px;
+    transition : background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+#noteInput {
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+#notesContainer {
+    margin-top: 20px;
+}
