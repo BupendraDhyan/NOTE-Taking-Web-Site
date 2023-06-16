@@ -20,3 +20,16 @@ body.dark-mode {
 #notesContainer {
     margin-top: 20px;
 }
+
+.note {
+    background-color: #f1f1f1;
+    border: 1px solid, #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.dark-mode .note {
+    background-color: #f1f1f1;
+    color: #f1f1f1;
+    border-color: #999;
+}
