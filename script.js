@@ -8,3 +8,9 @@ document.getElementById("noteForm").addEventListener("submit", function(event) {
     notesContainer.appendChild(note);
     noteInput.value = "";
 });
+
+document.getElementById("toggleDarkMode").addEventListener("click", function()
+{
+    const body = document.querySelector("body");
+    body.classList.toggle("dark-mode");
+});
