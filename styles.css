@@ -1,9 +1,9 @@
 body {
-    font font-family: Arial, sans-serif;
-    max-width : 800px;
-    margin : 0 auto;
-    padding : 20px;
-    transition : background-color 0.5s, color 0.5s;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 body.dark-mode {
