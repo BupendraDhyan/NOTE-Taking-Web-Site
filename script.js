@@ -25,3 +25,25 @@ const firebaseConfig = {
     appId: "1:79500910698:web:c3b4806a9eed1464b66a13",
     measurementId: "G-01DX3JT797"
   };
+
+  firebase.initializeapp(firebaseConfig);
+  const database = firebase.database();
+
+  document.getElementById("noteForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const noteInput = document.getElementById("noteInput");
+    const notesContainer = document.getElementById("notesContainer");
+    const note = document.createElement("div");
+    note.className = "note";
+    note.textContent = noteInput.value;
+
+    //save note to the database
+
+    database.ref("notes").push({
+        content: noteInput.value
+    });
+
+    notesContainer.appendChild(note);
+    noteInput.value = "";
+
+  });
