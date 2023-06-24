@@ -47,3 +47,16 @@ const firebaseConfig = {
     noteInput.value = "";
 
   });
+
+  function displayNote(content){
+    const notesContainer = document.getElementById("notesContainer");
+    const note = document.createElement("div");
+    note.className = "note";
+    note.textContent = content;
+    notesContainer.appendChild(note);
+  }
+
+  database.ref("notes").on("child_added", function(snapshot){
+    const noteContent = snapshot.val().content;
+    displayNote(noteContent);
+  });
